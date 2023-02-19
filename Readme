@@ -10,3 +10,8 @@ The Arduino sketch for Nano 33 BLE Sense uses a proximity (infrared) sensor to d
 /* App */
 
 The Android app merely scans the Beacon Service UUID and reads the RSSI value. As soon as the Service UUID is visible, and the RSSI value falls below a certain threshold, a notification is sent.
+
+/* Video Demo */
+
+This is a demo of when the old sketch is used. It only uses the proximity sensor. The detection was not robust enough. To many false positives. 
+The second sketch works better as is uses accelerometer. However, you need to attach the sensor to the mailbox door.
