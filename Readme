@@ -1,0 +1,12 @@
+/* Intro */
+
+I have developed a system that saves residents of an apartment complex from the unnecessary task of checking their mailbox while also ensuring that the mailbox is emptied on time to avoid any legal issues. The system is based on a user-friendly notification system via smartphone and detects the mailbox's fill level using a sensor. When the mailbox is full, the resident receives a notification on their smartphone, reminding them to empty the mailbox.
+
+/* Arduino Sketch */
+
+The Arduino sketch for Nano 33 BLE Sense uses a proximity (infrared) sensor to detect mail dropping into the mailbox and an accelerometer to detect when the mailbox is opened. The accelerometer resets the mail detection, so it is essential to ensure that the proximity sensor is close to where the mail drops, and the accelerometer is attached to the mailbox door. When mail comes, the BLE module of the board starts advertising a specific service UUID.
+
+
+/* App */
+
+The Android app merely scans the Beacon Service UUID and reads the RSSI value. As soon as the Service UUID is visible, and the RSSI value falls below a certain threshold, a notification is sent.
